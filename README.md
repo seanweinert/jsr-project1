@@ -1,32 +1,37 @@
-# Chatbot!
+# Marvin the Paranoid Android chat bot
 
-## Our favorite AI nemesis, HAL9000 vs. Dave Bowman
+##THINGS TO CHANGE/IMPLEMENT
 
-* Construct a chatbot that responds to various inputs from Dave
-* Feel free to use the HTML and CSS scaffolds or construct your own
-* Be creative with your logic and responses!
-* Feel free to also change the characters and anything in the starter code—be creative!
+- move if/else statements to a switch statement
+- fix loop through auto-response not working
+- change from HTML function call to JS event listener
 
-## Grading Rubric (Pass/Partial/Fail)
+## As part of my 10 week Javascript class I have been assigned to create a chabot that does the following:
 
-### Required
+- Have the AI respond to user input
+- Do at least 3 different things
+- One of the commands must utilize the list of people in the class to send a reply
+- Use at least 1 conditional to change the response
+- Leverage a for loop to iterate over a collection
+- Use a random component
+- Go above and beyond simple `if/else` statements
 
-* Have the AI respond to user input
-* Do at least 3 different things
-* One of the commands must utilize the list of people in the class to send a reply
-* Use at least 1 conditional to change the response
-* Leverage a for loop to iterate over a collection
-* Use a random component
-* Go above and beyond simple `if/else` statements
+# What Marvin does
 
-### Stretch Goals
+- Marvin asks for your name. By default, Marvin will randomize through an array of characters from H2G2.
+  - User can choose between entering a name or using the default
+  - In either case, the user's name will display in the user's chatbox and Marvin will print a welcome message to the user.
+- Marvin has a 'userResponse()' function that is called from the submit button on the index.html page
 
-* Have 2 or more AIs responding based upon user input
-* Use a regular expression to parse and manipulate the response
-* Have a conversation between two AIs (without creating an infinite loop!)
+  - userResponse() is called in two ways:
+    - Using [enter] anywhere on the page by calling "onsubmit="userResponse(); return false"" in the form tag
+    - Clicking on the "Let's Chat!" button by using ""onclick="userResponse()"" in the button tag
+  - When userResponse() is called it uses an IF/ELSE statment to verify if any keywords have been enetered into the input field
+    - IF some part of the field contatins one of the keywords, it prints a pre-programmed response from the MARVIN array
+    - ELSE it will print a looped auto-response from the RESPONSE array
 
-## Deliverables
+- Using HTML <option>, I've included a dropdown list for users to see available keywords
 
-* A working chatbot hosted somewhere publicly accessible (CodePen, Github Pages, etc.)
-* A new git respository containing your code
-* A `README.md` file with explanations of what your bot does, what commands it responds to, the approach taken, unsolved problems, etc.
+# How Marvin looks:
+
+- Marvin's background is a solid color with a transparent PNG of Marvin found on google. Used fonts.google.com for font changes.
